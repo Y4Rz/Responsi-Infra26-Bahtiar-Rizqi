@@ -1,7 +1,13 @@
 <?php
 
-$nama = "ganti ke namamu";
-$nim  = "ganti ke nimmu";
+$conn = new mysqli("db", "student", "student123", "responsi");
+
+if ($conn->connect_error) {
+    die("Koneksi database gagal: " . $conn->connect_error);
+}
+
+$result = $conn->query("SELECT * FROM students LIMIT 1");
+$data = $result->fetch_assoc();
 
 ?>
 
@@ -18,17 +24,17 @@ $nim  = "ganti ke nimmu";
 
 <p>
 Nama Praktikan:
-<strong><?= $nama ?></strong>
+<strong><?= $data['nama'] ?></strong>
 </p>
 
 <p>
 NIM:
-<strong><?= $nim ?></strong>
+<strong><?= $data['nim'] ?></strong>
 </p>
 
 <p>
 Container:
-<strong>WEB-WEB</strong>
+<strong>WEB-2</strong>
 </p>
 
 </body>
