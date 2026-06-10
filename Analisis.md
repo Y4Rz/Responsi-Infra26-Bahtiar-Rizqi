@@ -259,7 +259,7 @@ DB_HOST: mysql
 Sesuaikan nilai `DB_HOST` dengan nama service database yang terdaftar:
 
 ```yaml
-DB_HOST: db
+DB_HOST: mysql-db
 ```
 
 ---
@@ -401,10 +401,17 @@ RUN docker-php-ext-install mysqli
 Kemudian lakukan rebuild container:
 
 ```bash
-docker compose build --no-cache
-docker compose up -d
+docker compose up -d --build
 ```
+<img width="1456" height="647" alt="image" src="https://github.com/user-attachments/assets/7457c002-957f-4a30-af73-4dfe27fadb87" />
 
 ---
 
 ## Screenshot Hasil
+<img width="1466" height="311" alt="image" src="https://github.com/user-attachments/assets/5e401596-6cc3-4063-8046-e4f3abd9fcf3" />
+<img width="647" height="372" alt="image" src="https://github.com/user-attachments/assets/7238574c-4cd4-4a36-8ac6-ef13cbe5de20" />
+<img width="646" height="380" alt="image" src="https://github.com/user-attachments/assets/0864d5c1-0d6e-4792-a0cf-c361944b281b" />
+<img width="647" height="379" alt="image" src="https://github.com/user-attachments/assets/987a7f00-a063-43ef-82ff-e52df441bb7c" />
+
+
+
